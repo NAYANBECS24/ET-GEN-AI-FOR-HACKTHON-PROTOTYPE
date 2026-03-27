@@ -1,0 +1,27 @@
+{
+  "name": "aegis-ghostguard",
+  "displayName": "AEGIS GhostGuard",
+  "description": "Detect hallucinated/malicious imports in real time.",
+  "version": "0.0.1",
+  "publisher": "aegis",
+  "engines": { "vscode": "^1.90.0" },
+  "activationEvents": ["onStartupFinished", "onLanguage:python", "onLanguage:javascript", "onLanguage:typescript"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {"command": "aegis.verifyCurrentFile", "title": "AEGIS: Verify Imports"}
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@types/vscode": "^1.90.0",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "axios": "^1.7.2"
+  }
+}
